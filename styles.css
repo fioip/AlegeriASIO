@@ -1,4 +1,9 @@
-h1 {
-    color: red;
-    text-decoration: underline;
-}
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Poppins, Dancing Script;
+  }
+  
+  html {
+    height: 100%;
+  }
