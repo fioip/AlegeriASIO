@@ -62,3 +62,9 @@ Logica de gestionare a candidaților
 Funcția de adăugare candidați noi
 Stocarea datelor în localStorage (partea de salvare)
 Gruparea candidaților după funcție
+
+Structura de date pentru candidați
+
+Definirea obiectului pentru candidați
+Generarea ID-urilor unice
+Sortarea și filtrarea candidaților
