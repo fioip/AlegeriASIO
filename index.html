@@ -4,48 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
 
     <title>Alegeri ASIO</title>
   </head>
 
-  <body>
-    <h1 id="title">Alegeri ASIO</h1>
-
-    <div id="box">
-      <p id="sub-title">Adaugă candidat</p>
-      <form>
-        <div class="grup">
-          <input type="text" placeholder="Nume" required />
-          <input type="text" placeholder="Prenume" required />
-
-          <select name="functie" id="functie" required>
-            <option value="">Selectează funcția</option>
-            <option value="presedinte">Președinte</option>
-            <option value="vicepresedinte-interne">Vicepreședinte Interne</option>
-            <option value="vicepresedinte-externe">Vicepreședinte Externe</option>
-            <option value="secretar-general">Secretar General</option>
-            <option value="director-general">Director General</option>
-            <option value="trezorier">Trezorier</option>
-            <option value="director-fundraising">Director Fundraising</option>
-            <option value="director-imagine">Director Imagine</option>
-            <option value="director-hr">Director HR</option>
-            <option value="director-proiecte">Director Proiecte</option>
-            <option value="director-alumni">Director Alumni</option>
-          </select>
-
-          <button type="submit" class="btn">Adaugă Candidat</button>
+  <body class="d-flex flex-column align-items-center">
+    <div class="container text-center py-4">
+      <h1 id="title" class="display-4 mb-5">Alegeri ASIO</h1>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="card shadow rounded mb-5 mt-4">
+            <div class="card-body p-4 p-lg-5">
+              <h2 class="card-title fs-2 fw-bold text-start mb-4">Adaugă candidat</h2>
+              
+              <form id="candidates" class="mb-5">
+                <div class="row g-3 align-items-center">
+                  <div class="col-12 col-lg-3">
+                    <input type="text" id="name" class="form-control form-control-lg" placeholder="Nume" required>
+                  </div>
+                  <div class="col-12 col-lg-3">
+                    <input type="text" id="prenume" class="form-control form-control-lg" placeholder="Prenume" required>
+                  </div>
+                  <div class="col-12 col-lg-3">
+                    <select id="functie" class="form-select form-select-lg" required>
+                      <option value="">Selectează funcția</option>
+                      <option value="presedinte">Președinte</option>
+                      <option value="vicepresedinte-interne">Vicepreședinte Interne</option>
+                      <option value="vicepresedinte-externe">Vicepreședinte Externe</option>
+                      <option value="secretar-general">Secretar General</option>
+                      <option value="director-general">Director General</option>
+                      <option value="trezorier">Trezorier</option>
+                      <option value="director-fundraising">Director Fundraising</option>
+                      <option value="director-imagine">Director Imagine</option>
+                      <option value="director-hr">Director HR</option>
+                      <option value="director-proiecte">Director Proiecte</option>
+                      <option value="director-alumni">Director Alumni</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-lg-3">
+                    <button type="submit" class="btn btn-custom btn-lg w-100 text-white">Adaugă Candidat</button>
+                  </div>
+                </div>
+              </form>
+              
+              <div class="error-message p-3 rounded">
+                <p class="fw-bold fs-5 mb-0">Numărul total de voturi diferă!</p>
+                <div></div>
+              </div>
+            </div>
+          </div>
         </div>
-      </form>
-
-      <div class="card">
-        <p class="error-msg">Numărul total de voturi diferă!</p>
-        <div></div>
       </div>
+      
+      <button type="button" class="btn btn-custom btn-lg text-white mb-5">Resetare Tabel Voturi</button>
     </div>
-
-    <button type="submit" class="btn-reset">Resetare Tabel Voturi</button>
-
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
